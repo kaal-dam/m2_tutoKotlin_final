@@ -42,7 +42,9 @@ class MainActivity : AppCompatActivity() {
 //        val t2 = b.length
         val t2 = b?.length
         val t3 = b?.length ?: -1
-//
+
+        a = b ?: "toto"
+
 //        var c: Book = BookRepository.getByTitle("LÉGENDE")
         toastLong("a=$a b=$b t1=$t1 t2=$t2 t3=$t3")
     }

@@ -68,13 +68,13 @@ object BookRepository {
         }
     }
 
-//public List<Sting> getAllTitle(){
-//        List<String> res = new ArrayList<>();
-//        for(Book b : listLivre){
-//            res.add(b.getTitle());
-//        }
-//        return res;
-//}
+/*public List<Sting> getAllTitle(){
+        List<String> res = new ArrayList<>();
+        for(Book b : listLivre){
+            res.add(b.getTitle());
+        }
+        return res;
+}*/
 
     fun getAllTitle(): List<String> {
         return listLivre.map { book: Book -> book.title }
@@ -82,12 +82,12 @@ object BookRepository {
 
 
 
-//public Book getByTitle(String title){
-//    for (Book b: listLivre){
-//        if (b.title.equals(title))
-//            return book;
-//    };
-//}
+/*public Book getByTitle(String title){
+    for (Book b: listLivre){
+        if (b.title.equals(title))
+            return book;
+    };
+}*/
 
     fun getByTitle(title:String):Book? = listLivre.find { book:Book -> book.title.equals(title) }
 }
